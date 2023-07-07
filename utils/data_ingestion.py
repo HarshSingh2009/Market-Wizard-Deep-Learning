@@ -2,7 +2,7 @@ from tiingo import TiingoClient
 from datetime import datetime
 import streamlit as st
 import pandas as pd
-import os 
+import os
 
 def list_files():
     files = []
@@ -11,7 +11,6 @@ def list_files():
             files.append(filename)
     return files
 
-API_KEY = '045ee573e2f164700d7bb102340fdf3b23b8489c'
 
 def get_today_date():
     today = datetime.now()
@@ -21,14 +20,15 @@ def get_today_date():
     return datetime(year, month, day)
 
 class DataIngestion():
-    def __init__(self, stock_code):
+    def __init__(self, stock_code, api_key):
         self.stock_code = stock_code
+        self.api_key = api_key
     
     def get_data_set(self):
         if f'{self.stock_code}.csv' not in list_files():
             st.text('Using Generated Data from Tiingo')
             config = {
-                'api_key': API_KEY,
+                'api_key': self.api_key,
                 'session': True
             }
             client = TiingoClient(config)

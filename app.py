@@ -144,7 +144,11 @@ if selected == 'Load & preprocess Data':
     get_free_space(1)
     stock_code = st.selectbox('Please select the stock you want', stock_codes)
     if st.button('Extract Data from Tiingo'):
-        data_extraction_pipeline = DataIngestion(stock_code=stock_code)
+        try:
+            data_extraction_pipeline = DataIngestion(stock_code=stock_code, api_key=st.secrets['secrets']['auth_token'])
+        except:
+            data_extraction_pipeline = DataIngestion(stock_code=stock_code, api_key=st.secrets['auth_token'])
+
         df = data_extraction_pipeline.get_data_set()
         st.success('Dataframe successfully extracted from Tiingo')
         st.dataframe(df)
