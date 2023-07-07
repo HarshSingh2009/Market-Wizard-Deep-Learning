@@ -1,0 +1,11 @@
+tensorflow==2.12.0
+numpy
+pandas
+matplotlib
+plotly
+seaborn
+streamlit
+streamlit-option-menu
+scikit-learn
+tiingo
+datetime
