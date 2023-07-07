@@ -1,2 +1,42 @@
 # Market-Wizard-Deep-Learning
-Market Wizard is a Stock Prediction and Forecasting App that allows to build customized models for each of the stocks, you can then download the model and then import it and then make predictions up to 2 years in the Future for the stock
+Market Wizard is a Stock Prediction and Forecasting App that allows to build customized models for each of the stocks, you can then download the model. Import the model you have donwloaded and then make predictions up to 2 years in the Future for the stock. This app also provides a ton of Data Visualization charts for better understanding the performance of the stock or the model performance
+
+## Software requirements and tools
+1. [Python](https://www.python.org/downloads/)
+2. [Tiingo](https://www.tiingo.com/)
+3. [Github Account](https://github.com/)
+4. [VS Code IDE](https://code.visualstudio.com/)
+5. [GitCLI](https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line)
+6. [JupyterNotebook](https://jupyter.org/)
+
+Create a new virtual environment
+
+```
+virtualenv venv
+```
+
+Activate virtual environment
+
+```
+.\venv\Scripts\activate.ps1
+```
+
+
+Cloning a Repository in Githib 
+
+```
+git clone <path>
+```
+
+Changing the name of the branch Master to Main
+
+```
+git branch -M main
+```
+
+Commit changes and push to main branch
+ 
+```
+git commit -m 'name of commit'
+git push origin main
+```
