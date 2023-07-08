@@ -25,7 +25,7 @@ class Model_Training():
         self.model.compile(loss='mean_squared_error', optimizer='adam')
     
     def train_model(self):
-        history = self.model.fit(self.X_train, self.y_train, epochs=3, batch_size=64, validation_data=(self.X_test, self.y_test), verbose=1)
+        history = self.model.fit(self.X_train, self.y_train, epochs=100, batch_size=64, validation_data=(self.X_test, self.y_test), verbose=1)
         return self.model, history
     
     def predict_test_data(self):

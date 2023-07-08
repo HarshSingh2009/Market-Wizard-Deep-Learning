@@ -119,6 +119,8 @@ if selected == 'Home':
     st.markdown("6. It will also display performance graphs for training and testing. 📈")
     st.markdown("7. Once the model is trained, you can download it using the provided link. 📥")
 
+    st.warning("Model Training might take up to hours if you don't have a GPU")
+
     get_free_space(1)
 
     st.subheader("🔹 Step 3: Predict")
