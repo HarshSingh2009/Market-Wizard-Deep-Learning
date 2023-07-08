@@ -1,5 +1,8 @@
-# Market-Wizard-Deep-Learning
-Market Wizard is a Stock Prediction and Forecasting App that allows to build customized models for each of the stocks, you can then download the model. Import the model you have donwloaded and then make predictions up to 2 years in the Future for the stock. This app also provides a ton of Data Visualization charts for better understanding the performance of the stock or the model performance
+# Market-Wizard -  Deep Learning Inspired Project
+Market Wizard is a Stock Prediction and Forecasting App that allows to build customized models for each of the stocks, you can then download the model. Import the model you have donwloaded and then make predictions up to 1 year in the Future for the stock. This app also provides a ton of Data Visualization charts for better understanding the performance of the stock or the model performance
+
+## Link to Deployed App on Streamlit
+[Market-Wizard App](https://stock-market-wizard.streamlit.app/)
 
 ## Software requirements and tools
 1. [Python](https://www.python.org/downloads/)

@@ -267,7 +267,7 @@ if selected == 'Model Training':
     with open('current_stock_code.txt', 'r') as f:
         selected_stock_code = f.read().strip()
 
-    st.title(f'Build and Train the Model for {selected_stock_code}')
+    st.title(f'Build and Train the Model')
 
     try : 
         X_train, y_train, X_test, y_test = np.load(f'./Numpy Arrays/{selected_stock_code}_X_train.npy'), np.load(f'./Numpy Arrays/{selected_stock_code}_y_train.npy'), np.load(f'./Numpy Arrays/{selected_stock_code}_X_test.npy'), np.load(f'./Numpy Arrays/{selected_stock_code}_y_test.npy') 
@@ -413,7 +413,7 @@ if selected == 'Predict':
             summary_to_text(model)
             get_free_space(2)
             st.markdown('## Please choose the number of days in the future do you want the prediction for 😄')
-            choice = st.number_input('Choose the Number of Future Days that you want the output for : ', 1, 500)
+            choice = st.number_input('Choose the Number of Future Days that you want the output for : ', 1, 365)
             if st.button('Get Model Predictions'):
                 st.info(f'You are now going to get the Future {choice} days of close values for the stock {selected_stock_code}')
 
