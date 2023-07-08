@@ -12,16 +12,16 @@ Market Wizard is a Stock Prediction and Forecasting App that allows to build cus
 5. [GitCLI](https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line)
 6. [JupyterNotebook](https://jupyter.org/)
 
-Create a new virtual environment
+Create a new virtual environment using conda
 
 ```
-virtualenv venv
+conda create -n ENV_NAME python=3.10
 ```
 
 Activate virtual environment
 
 ```
-.\venv\Scripts\activate.ps1
+conda activate ENV_NAME
 ```
 
 
@@ -41,5 +41,5 @@ Commit changes and push to main branch
  
 ```
 git commit -m 'name of commit'
-git push origin main
+git push -u origin main
 ```
