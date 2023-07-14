@@ -16,7 +16,7 @@ import pickle
 import os
 import tempfile
 
-st.set_page_config(layout="wide")
+st.set_page_config(layout="wide", page_title='Market-Wizard.com', page_icon='📈')
 
 
 def summary_to_text(model):
@@ -84,7 +84,6 @@ with st.sidebar:
 
 
 if selected == 'Home':    
-    delete_files_in_folder()
            
 # Home/Instruction Manual
     st.title("📈 Market-Wizard App")
@@ -137,11 +136,13 @@ if selected == 'Home':
     st.markdown('2. Now you can directly go to the Predict page, import your model and make predictions')
 
     get_free_space(2)
+    st.warning('Disclaimer: This stock prediction project is for educational purposes only. The predictions are not guaranteed and should not be used for practical investment decisions. We are not responsible for any financial losses resulting from the use of this project.')
     st.success("🎉 Congratulations! You have successfully learned how to use the Stock Prediction and Forecasting App.")
     st.balloons()
 
 
 if selected == 'Load & preprocess Data':
+    delete_files_in_folder()
     st.title('Extracting stock data and Preprocessing it.')
     get_free_space(1)
     stock_code = st.selectbox('Please select the stock you want', stock_codes)
